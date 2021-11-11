@@ -205,6 +205,11 @@ int main(int argc, char *argv[])
             memset(msg, 0, MAXLINE);
 
             read(sockfd, msg, sizeof(msg));
+            if(strcmp(msg, "Error") == 0)
+            {
+                printf("Sever: %s\n\n", msg);
+                continue;
+            }
            
             printf("Server: \n");
 

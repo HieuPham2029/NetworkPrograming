@@ -189,6 +189,7 @@ int main(int argc, char *argv[])
            
             if(passEncryption(data.newpass, str_out_digit, str_out_alpha) == 0)
             {
+                write(connfd, "Error", strlen("Error"));
                 break;
             }
             changePass(data.username, data.newpass);
