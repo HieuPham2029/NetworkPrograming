@@ -159,7 +159,7 @@ int main(int argc, char *argv[])
                             login = 0;
                             break;
                         }
-                        send(newSoket, isBlocked, strlen(isBlocked), 0);
+                        send(newSoket, notOK, strlen(notOK), 0);
                         continue;
                     }
                     if (checkUserActive(data.username) == 0)
